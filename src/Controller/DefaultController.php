@@ -29,4 +29,47 @@ class DefaultController extends AbstractController
     {
         return $this->render('pages/product.html.twig');
     }
+    /*
+    * Fonction permettant d'afficher le detail de produit
+    * @Route("/", name="app_detail")
+    * @return Response
+    */
+    #[Route('/detail/products', name: 'app_detail')]
+    public function detailProduct(): Response
+    {
+        return $this->render('pages/detail-product.html.twig');
+    }
+
+    /*
+    * Fonction permettant d'afficher le panier
+    * @Route("/", name="app_cart")
+    * @return Response
+    */
+    #[Route('/panier', name: 'app_cart')]
+    public function panier(): Response
+    {
+        return $this->render('pages/cart.html.twig');
+    }
+
+    /*
+    * Fonction permettant d'afficher le checkout
+    * @Route("/", name="app_checkout")
+    * @return Response
+    */
+    #[Route('/checkout', name: 'app_checkout')]
+    public function checkout(): Response
+    {
+        return $this->render('pages/checkout.html.twig');
+    }
+
+    /*
+    * Fonction permettant d'afficher la liste des produits
+    * @Route("/", name="app_contact")
+    * @return Response
+    */
+    #[Route('/contact', name: 'app_contact')]
+    public function contact(): Response
+    {
+        return $this->render('pages/contact.html.twig');
+    }
 }
